@@ -15,7 +15,7 @@ const AdminLogin = () => {
     setError(''); // Clear previous errors
 
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+      const response = await axios.post('https://threew-assignment.onrender.com/api/admin/login', { username, password });
       const { token } = response.data;
 
       // Save token to localStorage

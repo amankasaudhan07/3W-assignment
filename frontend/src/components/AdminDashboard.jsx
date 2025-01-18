@@ -17,7 +17,7 @@ const AdminDashboard = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/admin/dashboard', {
+        const response = await axios.get('https://threew-assignment.onrender.com/api/admin/dashboard', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUsers(response.data);

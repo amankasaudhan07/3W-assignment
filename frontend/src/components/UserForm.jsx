@@ -18,7 +18,7 @@ const UserForm = () => {
     formData.append('socialMediaHandle', socialMediaHandle);
 
     try {
-      await axios.post('http://localhost:5000/api/create', formData, {
+      await axios.post('https://threew-assignment.onrender.com/api/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
