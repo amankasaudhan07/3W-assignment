@@ -13,8 +13,8 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-    credentials:true,
     origin:true,
+    credentials:true,
     methods:["POST","GET"]
 }));
 
@@ -24,7 +24,9 @@ app.use('/api', adminRoutes);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI,{
+    family:4
+  })
   .then(() => {
     console.log('Connected to MongoDB');
   })
